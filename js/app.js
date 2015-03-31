@@ -42,50 +42,73 @@ function SierraYoga() {
 SierraYoga.prototype.init = function() {
     var self = this;
     this.setupRouting();
-
-    $.when(
-        this.loadTemplate("Home")
-        // this.loadTemplate("Portfolio"),
-        // this.loadTemplate("About"),
-        // this.loadTemplate("Media"),
-        // this.loadTemplate("Schedule"),
-        // this.loadTemplate("Contact"),
-        // this.loadTemplate("Products")
-    ).then(function() {
-        Path.listen();
-    })
+    Path.listen();
 }
 
 SierraYoga.prototype.setupRouting = function() {
     var self = this;
 
-    Path.map("#/").to(function() {});
+    Path.map("#/").to(function() {
+        $.when(
+            self.loadTemplate("home")
+        ).then(function() {
+            self.drawHome(arguments[0])
+        });
+    });
 
     Path.map("#/Home").to(function() {
-        self.drawHome();
+        $.when(
+            self.loadTemplate("home")
+        ).then(function() {
+            self.drawHome(arguments[0])
+        });
     });
 
     Path.map("#/Portfolio").to(function() {
-        self.drawPortfolio();
+        $.when(
+            self.loadTemplate("portfolio")
+        ).then(function() {
+            self.drawPortfolio(arguments[0])
+        });
     });
 
     Path.map("#/About").to(function() {
-        self.drawAbout();
+        $.when(
+            self.loadTemplate("about")
+        ).then(function() {
+            self.drawAbout(arguments[0])
+        });
     });
 
     Path.map("#/Media").to(function() {
-        self.drawMedia();
+        $.when(
+            self.loadTemplate("media")
+        ).then(function() {
+            self.drawMedia(arguments[0])
+        });
     });
 
     Path.map("#/Schedule").to(function() {
-        self.drawSchedule();
+        $.when(
+            self.loadTemplate("schedule")
+        ).then(function() {
+            self.drawSchedule(arguments[0])
+        });
     });
 
     Path.map("#/Contact").to(function() {
-        self.drawContact();
+        $.when(
+            self.loadTemplate("contact")
+        ).then(function() {
+            self.drawContact(arguments[0])
+        });
     });
     Path.map("#/Products").to(function() {
-        self.drawProducts();
+        $.when(
+            self.loadTemplate("products")
+        ).then(function() {
+            self.drawProducts(arguments[0])
+        });
     });
 
     Path.root("#/");
@@ -97,27 +120,38 @@ SierraYoga.prototype.loadTemplate = function(name) {
     });
 }
 
-SierraYoga.prototype.drawHome = function() {
+SierraYoga.prototype.drawHome = function(template) {
     console.log("Home");
-    var grid = document.querySelector("#page-content-wrapper");
-    var htmlString = _.template("Home");
-    grid.innerHTML = htmlString;
+    var background = document.querySelector("#page-content-wrapper");
+    background.innerHTML = template;
 }
-SierraYoga.prototype.drawPortfolio = function() {
+SierraYoga.prototype.drawPortfolio = function(template) {
     console.log("Portfolio");
+    var background = document.querySelector("#page-content-wrapper");
+    background.innerHTML = template;
 }
-SierraYoga.prototype.drawAbout = function() {
+SierraYoga.prototype.drawAbout = function(template) {
     console.log("About");
+    var background = document.querySelector("#page-content-wrapper");
+    background.innerHTML = template;
 }
-SierraYoga.prototype.drawMedia = function() {
+SierraYoga.prototype.drawMedia = function(template) {
     console.log("Media");
+    var background = document.querySelector("#page-content-wrapper");
+    background.innerHTML = template;
 }
-SierraYoga.prototype.drawSchedule = function() {
+SierraYoga.prototype.drawSchedule = function(template) {
     console.log("Schedule");
+    var background = document.querySelector("#page-content-wrapper");
+    background.innerHTML = template;
 }
-SierraYoga.prototype.drawContact = function() {
+SierraYoga.prototype.drawContact = function(template) {
     console.log("Contact");
+    var background = document.querySelector("#page-content-wrapper");
+    background.innerHTML = template;
 }
-SierraYoga.prototype.drawProducts = function() {
+SierraYoga.prototype.drawProducts = function(template) {
     console.log("drawProducts");
+    var background = document.querySelector("#page-content-wrapper");
+    background.innerHTML = template;
 }
