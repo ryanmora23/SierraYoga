@@ -139,7 +139,20 @@
     font-size: x-large;
     background-color: lightgrey;
 }
-
+.background{
+    background-color: lightgrey;
+    height:100vh;
+}
+.home2{
+    font-family: fantasy;
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 110% 110%;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd_gJVEGLK6UecgFb337p-D56FDSjUJBlVZJ_h798rUtNijIcZpA);
+}
 .aboutImage {
     z-index: 2;
     background-size: 100%;
