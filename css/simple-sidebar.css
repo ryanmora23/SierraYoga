@@ -3,7 +3,6 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-
 /* Toggle Styles */
 
 #wrapper {
@@ -13,7 +12,6 @@
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
-
 /*#wrapper.toggled {
     padding-left: 250px;
 }*/
@@ -32,7 +30,6 @@
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
-
 /*#wrapper.toggled #sidebar-wrapper {
     width: 250px;
 }*/
@@ -43,12 +40,10 @@
     padding: 15px;
     padding-left: 100px;
 }
-
 /*#wrapper.toggled #page-content-wrapper {
     position: absolute;
     margin-right: -250px;
 }*/
-
 /* Sidebar Styles */
 
 .sidebar-nav {
@@ -74,7 +69,7 @@
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #fff;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .sidebar-nav li a:active,
@@ -101,41 +96,56 @@
     #wrapper {
         padding-left: 250px;
     }
-
-/*    #wrapper.toggled {
+    /*    #wrapper.toggled {
         padding-left: 0;
     }*/
-
+    
     #sidebar-wrapper {
         width: 250px;
     }
-
-/*    #wrapper.toggled #sidebar-wrapper {
+    /*    #wrapper.toggled #sidebar-wrapper {
         width: 0;
     }*/
-
+    
     #page-content-wrapper {
         padding: 20px;
         position: relative;
     }
-
-/*    #wrapper.toggled #page-content-wrapper {
+    /*    #wrapper.toggled #page-content-wrapper {
         position: relative;
         margin-right: 0;
     }*/
 }
-
 /* Home */
-
-
 /* Portolio */
-.portCont{
-    float:left;
+
+.portCont {
+    float: left;
     white-space: nowrap;
-    height:98vh;
+    height: 98vh;
     padding-bottom: 10px;
     padding-right: 5px;
 }
-.portfolio{
-    height:100%;
+
+.portfolio {
+    height: 100%;
+}
+/* about */
+
+.about {
+    z-index: 1;
+    font-family: fantasy;
+    text-align: center;
+    font-size: x-large;
+    background-color: lightgrey;
+}
+
+.aboutImage {
+    z-index: 2;
+    background-size: 100%;
+    background-image: url(https://s-media-cache-ak0.pinimg.com/236x/75/6f/a0/756fa0aed7b377f9a9a39e0c25ea5aa9.jpg);
+    opacity: .5;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50% 100%;
 }

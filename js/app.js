@@ -64,11 +64,11 @@ SierraYoga.prototype.setupRouting = function() {
         });
     });
 
-    Path.map("#/Portfolio").to(function() {
+    Path.map("#/Visuals").to(function() {
         $.when(
-            self.loadTemplate("portfolio")
+            self.loadTemplate("visuals")
         ).then(function() {
-            self.drawPortfolio(arguments[0])
+            self.drawVisuals(arguments[0])
         });
     });
 
@@ -80,11 +80,11 @@ SierraYoga.prototype.setupRouting = function() {
         });
     });
 
-    Path.map("#/Media").to(function() {
+    Path.map("#/Videos").to(function() {
         $.when(
-            self.loadTemplate("media")
+            self.loadTemplate("videos")
         ).then(function() {
-            self.drawMedia(arguments[0])
+            self.drawVideos(arguments[0])
         });
     });
 
@@ -125,8 +125,8 @@ SierraYoga.prototype.drawHome = function(template) {
     var background = document.querySelector("#page-content-wrapper");
     background.innerHTML = template;
 }
-SierraYoga.prototype.drawPortfolio = function(template) {
-    console.log("Portfolio");
+SierraYoga.prototype.drawVisuals = function(template) {
+    console.log("Visuals");
     var background = document.querySelector("#page-content-wrapper");
     background.innerHTML = template;
 }
@@ -135,8 +135,8 @@ SierraYoga.prototype.drawAbout = function(template) {
     var background = document.querySelector("#page-content-wrapper");
     background.innerHTML = template;
 }
-SierraYoga.prototype.drawMedia = function(template) {
-    console.log("Media");
+SierraYoga.prototype.drawVideos = function(template) {
+    console.log("Videos");
     var background = document.querySelector("#page-content-wrapper");
     background.innerHTML = template;
 }
